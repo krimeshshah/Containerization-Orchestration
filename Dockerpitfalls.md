@@ -9,6 +9,7 @@
  ### Good Dockerfile
     A digest takes the place of the tag when pulling an image. This will ensure that your Dockerfile remains immutable.
     FROM alpine@sha256:7043076348bf5040220df6ad703798fd8593a0918d06d3ce30c6c93be117e430
+    
  ### Running apt/apk/yum update
     Running apt-get install is one of those things virtually every Debian-based Dockerfile will have to do in order to satiate some external package requirements your code needs to run. However, using apt-get as an example, this comes with its own problems.
    #####  apt-get upgrade
