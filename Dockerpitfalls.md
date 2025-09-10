@@ -1,7 +1,7 @@
 # This Document Depicts the common Dockerpitfalls
 
  ### Using the latest Tag for an Image
-     Many Dockerfiles use the FROM package:latest pattern at the top of their Dockerfiles to pull the latest image from a Docker registry.
+    Many Dockerfiles use the FROM package:latest pattern at the top of their Dockerfiles to pull the latest image from a Docker registry.
      
  ### Bad Dockerfile
     FROM alpine
