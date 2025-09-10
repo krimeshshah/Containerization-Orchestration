@@ -5,7 +5,9 @@
      
  ### Bad Dockerfile
     FROM alpine
-    While simple, using the latest tag for an image means that your build can suddenly break if that image gets updated. This can lead to problems where everything builds fine locally (because your local cache thinks it        is the latest), while a build server may fail, because some pipelines make a clean pull on every build. Additionally, troubleshooting can prove to be difficult, since the maintainer of the Dockerfile didn’t actually        make any changes.
+    While simple, using the latest tag for an image means that your build can suddenly break if that image gets updated. 
+    This can lead to problems where everything builds fine locally (because your local cache thinks it is the latest), while a build server may fail,
+    because some pipelines make a clean pull on every build. Additionally, troubleshooting can prove to be difficult, since the maintainer of the Dockerfile didn’t actually make any changes.
  ### Good Dockerfile
     A digest takes the place of the tag when pulling an image. This will ensure that your Dockerfile remains immutable.
     FROM alpine@sha256:7043076348bf5040220df6ad703798fd8593a0918d06d3ce30c6c93be117e430
