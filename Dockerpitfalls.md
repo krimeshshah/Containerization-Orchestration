@@ -1,9 +1,9 @@
 # This Document Depicts the common Dockerpitfalls
 
-  ### Using the latest Tag for an Image
+ ### Using the latest Tag for an Image
      Many Dockerfiles use the FROM package:latest pattern at the top of their Dockerfiles to pull the latest image from a Docker registry.
      
-  ### Bad Dockerfile
+ ### Bad Dockerfile
     FROM alpine
     While simple, using the latest tag for an image means that your build can suddenly break if that image gets updated. This can lead to problems where everything builds fine locally (because your local cache thinks it is the latest), while a build server may fail, because some pipelines make a clean pull on every build. Additionally, troubleshooting can prove to be difficult, since the maintainer of the Dockerfile didn’t actually make any changes.
  ### Good Dockerfile
